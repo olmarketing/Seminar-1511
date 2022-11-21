@@ -13,7 +13,7 @@ int ThirdDigit(int num)
 
         while (num > 999)
         {
-            if (num > 999)
+            // if (num > 999)
             {
                 num = num / 10;
             }
