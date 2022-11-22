@@ -16,7 +16,7 @@ int CountDigits(int num)
         count++;
         num = num / 10;
     }
-    return count;
+    return count == 0 ? "1" : count;
 }
 int countDigits = CountDigits(number);
 Console.WriteLine($"Количество цифр в числе {number} - {countDigits}");
