@@ -13,8 +13,8 @@ int SumDigit(int num)
     int sum = 0;
     for (int i = 0; i <= sum; i++)
     {
-        int num1 = num % 10; //2
-        num = num / 10; //45
+        int num1 = num % 10; 
+        num = num / 10; 
         sum = sum + num1;
     }
     return sum;
