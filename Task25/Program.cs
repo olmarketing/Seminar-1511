@@ -14,6 +14,10 @@ if (b < 0)
 }
 else
 {
+    int degree = Degree(a, b);
+    Console.WriteLine($"{a} в степени {b} равно {degree}");
+}
+
     int Degree(int a1, int b1)
     {
         int res = a1;
@@ -23,6 +27,4 @@ else
         }
         return res;
     }
-    int degree = Degree(a, b);
-    Console.WriteLine($"{a} в степени {b} равно {degree}");
-}
+    
