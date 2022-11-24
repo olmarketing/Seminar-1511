@@ -9,6 +9,12 @@
 
 Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
+if (number < 100 | number > 999)
+Console.WriteLine("Это не трехзначное число");
+else{
+int view = ViewSecondNumber(number);
+Console.WriteLine(view);
+}
 
 int ViewSecondNumber(int num)
 {
@@ -17,5 +23,3 @@ int ViewSecondNumber(int num)
     return secondNum;
 }
 
-int view = ViewSecondNumber(number);
-Console.WriteLine(view);
