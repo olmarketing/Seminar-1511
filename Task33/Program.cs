@@ -1,7 +1,10 @@
-﻿// Напишите программу замена элементов массива: 
-// положительные элементы замените на 
-// соответствующие отрицательные, и наоборот.
-// [-4, -8, 8, 2] -> [4, 8, -8, -2]
+﻿// Задайте массив. Напишите программу, которая 
+// определяет, присутствует ли заданное число в массиве.
+// 4; массив [6, 7, 19, 345, 3] -> нет
+// 20 мин 3; массив [6, 7, 19, 345, 3] -> да
+
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {
@@ -28,16 +31,14 @@ void PrintArray(int[] arr)
 int[] array = CreateArrayRndInt(12, -9, 9);
 PrintArray(array);
 
-void NegativeArray(int[] arr)
+bool FindElement(int[] arr)
 {
-    
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] *= -1;
+        if (arr[i] == number) return true;
+        else return false;
     }
-    
+
 }
-
-NegativeArray(array);
-PrintArray(array);
-
+bool findElement = FindElement(array);
+Console.WriteLine(FindElement(array) ? "Да" : "Нет");
