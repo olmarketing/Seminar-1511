@@ -31,14 +31,13 @@ void PrintArray(int[] arr)
 int[] array = CreateArrayRndInt(12, -9, 9);
 PrintArray(array);
 
-bool FindElement(int[] arr)
+bool FindElement(int[] arr, int numb)
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] == number) return true;
-        else return false;
-    }
-
+        if (arr[i] == numb) return true;
+            }
+return false;
 }
-bool findElement = FindElement(array);
-Console.WriteLine(FindElement(array) ? "Да" : "Нет");
+bool findElement = FindElement(array, number);
+Console.WriteLine(FindElement(array, number) ? "Да" : "Нет");
