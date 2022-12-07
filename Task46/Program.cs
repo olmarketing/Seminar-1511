@@ -5,9 +5,9 @@
 // 5 -2 33 -2
 // 77 3 8 1
 
-int[,] CreateMatrixRndInt(int rows, int columns, int max, int max)
+int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
-    int[,] matix = new int[rows, columns];
+    int[,] matrix = new int[rows, columns];
     Random rnd = new Random();
 
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -29,8 +29,8 @@ void PrintMatrix(int[,] matrix)
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         if (j < matrix.GetLength(1) - 1)
-            Console.Write($"{matrix[i,j]}, ");
-        else Console.Write($"{matrix[i,j]}");
+            Console.Write($"{matrix[i,j],4}, ");
+        else Console.Write($"{matrix[i,j],4}");
     }
     Console.WriteLine("]");
     }
