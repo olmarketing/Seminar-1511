@@ -53,7 +53,7 @@ int NumElementsMatrix(int[,] matrix, int a1, int b1)
     {
              for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (a< matrix.GetLength(0) && b < matrix.GetLength(1))  num = matrix[a1-1,b1-1];
+            if (a1< matrix.GetLength(0) && b1 < matrix.GetLength(1))  num = matrix[a1-1,b1-1];
         }
 
     }
@@ -69,7 +69,6 @@ else return false;
 
 int[,] array = CreateMatrixRndInt(3, 3, 1, 9);
 PrintMatrix(array);
-CheckIndexElements(array,a,b);
 int number = NumElementsMatrix(array,a,b);
 Console.WriteLine(CheckIndexElements(array,a,b) ? ($"Это элемент {number}") : ($"Такого элемента нет") );
 
