@@ -13,10 +13,23 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 
 int SumElements(int m, int n)
 {
-    if (m == n) return 0;
+    if (m > n)
+    {
+        return m + SumElements(m-1,n);
+    }
+    else
+    {
+        if (m < n)
+        {
             return m + SumElements(m+1, n);
-      
+        }
+    }
+    return m;
+
 }
 
-int result = SumElements(number1, number2);
-Console.WriteLine(result);
+Console.WriteLine(SumElements(number1, number2));
+
+
+
+
